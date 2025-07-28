@@ -1,0 +1,73 @@
+
+
+<form #myForm="ngForm" (ngSubmit)="submitForm(myForm)"> 
+
+
+<!-- Language drop down -->
+<mat-form-field class="language">
+    <mat-label><mat-icon>language</mat-icon><b> Language (you want to receive a message in)</b></mat-label>
+    <mat-select matNativeControl name="language" [(ngModel)]="formData.language">
+        <mat-option value="arabic">العربية / Arabic</mat-option>
+        <mat-option value="bosnian">Bosanski / Bosnian</mat-option>
+        <mat-option value="zh-CN">简体中文 / Chinese (Simplified)</mat-option>
+        <mat-option value="zh-TW">繁體中文 / Chinese (Traditional)</mat-option>
+        <mat-option value="croatian">Hrvatski / Croatian</mat-option>
+        <mat-option value="danish">Dansk / Danish</mat-option>
+        <mat-option value="dutch">Nederlands / Dutch</mat-option>
+        <mat-option value="english">English / English</mat-option>
+        <mat-option value="finnish">Suomi / Finnish</mat-option>
+        <mat-option value="french">Français / French</mat-option>
+        <mat-option value="german">Deutsch / German</mat-option>
+        <mat-option value="greek">Ελληνικά / Greek</mat-option>
+        <mat-option value="hebrew">עברית / Hebrew</mat-option>
+        <mat-option value="hindi">हिन्दी / Hindi</mat-option>
+        <mat-option value="hungarian">Magyar / Hungarian</mat-option>
+        <mat-option value="indonesian">Bahasa Indonesia / Indonesian</mat-option>
+        <mat-option value="irish">Gaeilge / Irish</mat-option>
+        <mat-option value="italian">Italiano / Italian</mat-option>
+        <mat-option value="japanese">日本語 / Japanese</mat-option>
+        <mat-option value="korean">한국어 / Korean</mat-option>
+        <mat-option value="latin">Lingua Latina / Latin</mat-option>
+        <mat-option value="lithuanian">Lietuvių / Lithuanian</mat-option>
+        <mat-option value="montenegrin">Crnogorski / Montenegrin</mat-option>
+        <mat-option value="norwegian">Norsk / Norwegian</mat-option>
+        <mat-option value="polish">Polski / Polish</mat-option>
+        <mat-option value="portuguese">Português / Portuguese</mat-option>
+        <mat-option value="romanian">Română / Romanian</mat-option>
+        <mat-option value="russian">Русский / Russian</mat-option>
+        <mat-option value="serbian">Српски / Serbian</mat-option>
+        <mat-option value="slovak">Slovenčina / Slovak</mat-option>
+        <mat-option value="spanish">Español / Spanish</mat-option>
+        <mat-option value="swahili">Kiswahili / Swahili</mat-option>
+        <mat-option value="swedish">Svenska / Swedish</mat-option>
+        <mat-option value="tagalog">Filipino / Tagalog</mat-option>
+        <mat-option value="turkish">Türkçe / Turkish</mat-option>
+        <mat-option value="ukrainian">Українська / Ukrainian</mat-option>
+        <mat-option value="vietnamese">Tiếng Việt / Vietnamese</mat-option>
+    </mat-select>
+</mat-form-field>
+
+
+    <!-- Text field -->
+    <mat-form-field class="submission" floatLabel="always">
+        <mat-label><mat-icon>description</mat-icon><b> Received message</b></mat-label>
+        <textarea matInput class="submission-field" [(ngModel)]="formData.submission" name="submission"></textarea>
+
+    </mat-form-field>
+
+
+    <!-- Additional comments field -->
+    <mat-form-field class="comments" floatLabel="always">
+        <mat-label><b>Your reply</b></mat-label>
+        <textarea matInput maxlength="10000" placeholder="Enter your reply." name="additional_comments" [(ngModel)]="formData.comments" (input)="onInputComment($event)" ></textarea>
+        
+    </mat-form-field>
+     
+    <!-- Submit button field -->
+    <br>
+    <!-- Fetch button -->
+    <button mat-flat-button class="fetch-button" type="submit" (click)="enable_fetched_data()"><mat-icon>refresh</mat-icon>Fetch</button>
+    <button mat-flat-button type="submit" class="submit-button">Submit</button> 
+    @if (form_error) {<div id="submit-fail">Submission fails.</div>}
+
+</form>

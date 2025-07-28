@@ -1,0 +1,46 @@
+
+.active {
+	background: red;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  /*background-color: #2a9d8f;*/
+  max-height: 5%;    
+  /*color: white;*/
+  font-size: 22px;
+}
+
+/*a {
+  color: white;
+}*/
+
+a, u {
+  text-decoration: none !important;
+}
+
+/*#how-to {
+  color:navy;
+}*/
+
+.left-nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.center {
+  display: flex;
+  gap: 12px;
+}
+
+.right-nav-buttons {
+  display: flex;
+  gap: 12px; 
+}
+
+.switch {
+  display: flex;
+  gap: 12px; 
+  
+}

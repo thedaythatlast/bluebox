@@ -1,0 +1,32 @@
+button {
+  background-color: #0F9D58 !important;
+  color:white !important;
+}
+
+.processing {
+	background-color: gray !important;
+}
+
+mat-form-field {
+	position: relative;
+	width: 100%;
+	background-color: white;
+	border-color: gray;
+}
+
+form {
+	position: relative;
+	top: 6%;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.submission-field {
+	padding-bottom: 30%;
+}
+
+
+#submit-fail {
+	color: red;
+}
+
