@@ -28,9 +28,9 @@ A web application powered by Angular (frontend) and Node.js + PostgreSQL (backen
    cd /path/to/bluebox/frontend
    ```
 
-3. Install dependencies (only once):
+3. Install dependencies:
    ```bash
-   npm install
+   npm ci
    ```
 
 4. Start the development server:
